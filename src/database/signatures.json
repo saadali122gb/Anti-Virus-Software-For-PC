@@ -1,0 +1,826 @@
+{
+  "hash_signatures": [
+    {
+      "hash": "44d88612fea8a8f36de82e1278abb02f",
+      "hash_type": "md5",
+      "name": "EICAR-Test-File",
+      "type": "test",
+      "severity": "low",
+      "description": "EICAR antivirus test file"
+    },
+    {
+      "hash": "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f",
+      "hash_type": "sha256",
+      "name": "EICAR-Test-File",
+      "type": "test",
+      "severity": "low",
+      "description": "EICAR antivirus test file"
+    }
+  ],
+  "pattern_signatures": [
+    {
+      "name": "PowerShell.Downloader",
+      "type": "trojan",
+      "severity": "high",
+      "pattern": "(Invoke-WebRequest|IWR|wget|curl).*\\.(exe|dll|bat|ps1)",
+      "description": "PowerShell download and execute pattern"
+    }
+  ],
+  "scan_history": [
+    {
+      "id": 1767509416914,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:50:16.914Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:16.972Z",
+      "duration": 47
+    },
+    {
+      "id": 1767509424258,
+      "scan_type": "full",
+      "start_time": "2026-01-04T06:50:24.258Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:24.289Z",
+      "duration": 26
+    },
+    {
+      "id": 1767509425468,
+      "scan_type": "full",
+      "start_time": "2026-01-04T06:50:25.468Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:25.530Z",
+      "duration": 60
+    },
+    {
+      "id": 1767509426025,
+      "scan_type": "full",
+      "start_time": "2026-01-04T06:50:26.025Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:26.058Z",
+      "duration": 24
+    },
+    {
+      "id": 1767509426525,
+      "scan_type": "full",
+      "start_time": "2026-01-04T06:50:26.525Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:26.551Z",
+      "duration": 25
+    },
+    {
+      "id": 1767509427018,
+      "scan_type": "full",
+      "start_time": "2026-01-04T06:50:27.018Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:27.041Z",
+      "duration": 20
+    },
+    {
+      "id": 1767509427151,
+      "scan_type": "full",
+      "start_time": "2026-01-04T06:50:27.151Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:27.166Z",
+      "duration": 14
+    },
+    {
+      "id": 1767509437508,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:50:37.508Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:37.549Z",
+      "duration": 35
+    },
+    {
+      "id": 1767509438056,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:50:38.056Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:38.089Z",
+      "duration": 31
+    },
+    {
+      "id": 1767509438359,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:50:38.359Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:38.400Z",
+      "duration": 37
+    },
+    {
+      "id": 1767509438592,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:50:38.592Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:38.619Z",
+      "duration": 22
+    },
+    {
+      "id": 1767509456362,
+      "scan_type": "full",
+      "start_time": "2026-01-04T06:50:56.362Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:56.386Z",
+      "duration": 23
+    },
+    {
+      "id": 1767509457315,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:50:57.315Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:57.345Z",
+      "duration": 29
+    },
+    {
+      "id": 1767509457905,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:50:57.905Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:57.953Z",
+      "duration": 45
+    },
+    {
+      "id": 1767509459750,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:50:59.750Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:50:59.766Z",
+      "duration": 15
+    },
+    {
+      "id": 1767509460220,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:51:00.220Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:51:00.246Z",
+      "duration": 25
+    },
+    {
+      "id": 1767509460634,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:51:00.634Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:51:00.659Z",
+      "duration": 23
+    },
+    {
+      "id": 1767509461135,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:51:01.135Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:51:01.159Z",
+      "duration": 23
+    },
+    {
+      "id": 1767509461523,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:51:01.523Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:51:01.548Z",
+      "duration": 24
+    },
+    {
+      "id": 1767509461773,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:51:01.773Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:51:01.803Z",
+      "duration": 29
+    },
+    {
+      "id": 1767509461964,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:51:01.964Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:51:01.974Z",
+      "duration": 9
+    },
+    {
+      "id": 1767509462174,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:51:02.174Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:51:02.226Z",
+      "duration": 51
+    },
+    {
+      "id": 1767509462384,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:51:02.384Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:51:02.415Z",
+      "duration": 29
+    },
+    {
+      "id": 1767509462565,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:51:02.565Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:51:02.585Z",
+      "duration": 19
+    },
+    {
+      "id": 1767509462784,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T06:51:02.784Z",
+      "status": "completed",
+      "files_scanned": 0,
+      "threats_found": 0,
+      "end_time": "2026-01-04T06:51:02.849Z",
+      "duration": 64
+    },
+    {
+      "id": 1767512587148,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T07:43:07.148Z",
+      "status": "completed",
+      "files_scanned": 3045,
+      "threats_found": 17,
+      "end_time": "2026-01-04T07:46:39.605Z",
+      "duration": 212335
+    },
+    {
+      "id": 1767513736304,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T08:02:16.304Z",
+      "status": "completed",
+      "files_scanned": 3045,
+      "threats_found": 17,
+      "end_time": "2026-01-04T08:08:24.913Z",
+      "duration": 368606
+    },
+    {
+      "id": 1767519734423,
+      "scan_type": "quick",
+      "start_time": "2026-01-04T09:42:14.423Z",
+      "status": "running",
+      "files_scanned": 0,
+      "threats_found": 0
+    }
+  ],
+  "threat_detections": [
+    {
+      "id": 1767509122343.7324,
+      "file_path": "D:\\Soft House\\Network Jammer\\tests\\temp\\eicar.com",
+      "threat_name": "EICAR-Test-File",
+      "threat_type": "test",
+      "severity": "low",
+      "detection_method": "signature-hash",
+      "detected_at": "2026-01-04T06:45:22.343Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767509239799.7212,
+      "file_path": "D:\\Soft House\\Network Jammer\\tests\\temp\\eicar.com",
+      "threat_name": "EICAR-Test-File",
+      "threat_type": "test",
+      "severity": "low",
+      "detection_method": "signature-hash",
+      "detected_at": "2026-01-04T06:47:19.799Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512597055.5583,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Downloads\\google-earth-pro_Y-JSLD1.exe",
+      "threat_name": "Heuristic Detection",
+      "threat_type": "suspicious",
+      "severity": "low",
+      "detection_method": "heuristic",
+      "detected_at": "2026-01-04T07:43:17.055Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512601283.5027,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Downloads\\GitHubDesktopSetup-x64.exe",
+      "threat_name": "Heuristic Detection",
+      "threat_type": "suspicious",
+      "severity": "medium",
+      "detection_method": "heuristic",
+      "detected_at": "2026-01-04T07:43:21.283Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512604540.1401,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\setup.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T07:43:24.540Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512608175.8545,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\upgloader.dll",
+      "threat_name": "Heuristic Detection",
+      "threat_type": "suspicious",
+      "severity": "low",
+      "detection_method": "heuristic",
+      "detected_at": "2026-01-04T07:43:28.175Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512609340.622,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\smiengine.dll",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T07:43:29.340Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512610755.8674,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\setupplatform.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T07:43:30.755Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512611277.7449,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\setuphost.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T07:43:31.277Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512611736.444,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\setup.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T07:43:31.736Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512612122.9595,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\rollback.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T07:43:32.122Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512614187.27,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\mighost.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T07:43:34.187Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512616873.4722,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\dism.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T07:43:36.873Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512674483.892,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\replacementmanifests\\networking-mpssvc-svc\\icfupgd.dll",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T07:44:34.483Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512675819.0933,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\replacementmanifests\\microsoft-windows-network-setup\\netsetupengine.dll",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T07:44:35.819Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512678263.1704,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\dlmanifests\\microsoft-windows-iasserver-migplugin\\iasmigreader.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T07:44:38.263Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512678682.1736,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\dlmanifests\\networking-mpssvc-svc\\icfupgd.dll",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T07:44:38.682Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512760348.585,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\AppData\\Local\\Temp\\chocolatey\\vcredist140\\14.44.35211\\VC_redist.x86.exe",
+      "threat_name": "Heuristic Detection",
+      "threat_type": "suspicious",
+      "severity": "low",
+      "detection_method": "heuristic",
+      "detected_at": "2026-01-04T07:46:00.348Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767512799444.211,
+      "scan_id": 1767512587148,
+      "file_path": "C:\\Users\\saada\\AppData\\Local\\Temp\\chocolatey\\vcredist140\\14.44.35211\\VC_redist.x86.exe",
+      "threat_name": "Heuristic Detection",
+      "threat_type": "suspicious",
+      "severity": "low",
+      "detection_method": "heuristic",
+      "detected_at": "2026-01-04T07:46:39.444Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513755724.665,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Downloads\\google-earth-pro_Y-JSLD1.exe",
+      "threat_name": "Heuristic Detection",
+      "threat_type": "suspicious",
+      "severity": "low",
+      "detection_method": "heuristic",
+      "detected_at": "2026-01-04T08:02:35.724Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513759945.7334,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Downloads\\GitHubDesktopSetup-x64.exe",
+      "threat_name": "Heuristic Detection",
+      "threat_type": "suspicious",
+      "severity": "medium",
+      "detection_method": "heuristic",
+      "detected_at": "2026-01-04T08:02:39.945Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513766901.7107,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\setup.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T08:02:46.901Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513772299.2993,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\upgloader.dll",
+      "threat_name": "Heuristic Detection",
+      "threat_type": "suspicious",
+      "severity": "low",
+      "detection_method": "heuristic",
+      "detected_at": "2026-01-04T08:02:52.299Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513774925.0186,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\smiengine.dll",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T08:02:54.925Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513776959.1897,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\setupplatform.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T08:02:56.959Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513777661.9673,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\setuphost.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T08:02:57.661Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513778377.1636,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\setup.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T08:02:58.377Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513779135.05,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\rollback.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T08:02:59.135Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513782175.9995,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\mighost.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T08:03:02.175Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513785517.7588,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\dism.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T08:03:05.517Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513871059.035,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\replacementmanifests\\networking-mpssvc-svc\\icfupgd.dll",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T08:04:31.059Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513874826.562,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\replacementmanifests\\microsoft-windows-network-setup\\netsetupengine.dll",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T08:04:34.826Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513880864.9124,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\dlmanifests\\networking-mpssvc-svc\\icfupgd.dll",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T08:04:40.864Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767513883676.2324,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\dlmanifests\\microsoft-windows-iasserver-migplugin\\iasmigreader.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T08:04:43.676Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767514020427.2947,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\AppData\\Local\\Temp\\chocolatey\\vcredist140\\14.44.35211\\VC_redist.x86.exe",
+      "threat_name": "Heuristic Detection",
+      "threat_type": "suspicious",
+      "severity": "low",
+      "detection_method": "heuristic",
+      "detected_at": "2026-01-04T08:07:00.427Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767514104739.6091,
+      "scan_id": 1767513736304,
+      "file_path": "C:\\Users\\saada\\AppData\\Local\\Temp\\chocolatey\\vcredist140\\14.44.35211\\VC_redist.x86.exe",
+      "threat_name": "Heuristic Detection",
+      "threat_type": "suspicious",
+      "severity": "low",
+      "detection_method": "heuristic",
+      "detected_at": "2026-01-04T08:08:24.739Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767519762215.12,
+      "scan_id": 1767519734423,
+      "file_path": "C:\\Users\\saada\\Downloads\\google-earth-pro_Y-JSLD1.exe",
+      "threat_name": "Heuristic Detection",
+      "threat_type": "suspicious",
+      "severity": "low",
+      "detection_method": "heuristic",
+      "detected_at": "2026-01-04T09:42:42.215Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767519772780.1738,
+      "scan_id": 1767519734423,
+      "file_path": "C:\\Users\\saada\\Downloads\\GitHubDesktopSetup-x64.exe",
+      "threat_name": "Heuristic Detection",
+      "threat_type": "suspicious",
+      "severity": "medium",
+      "detection_method": "heuristic",
+      "detected_at": "2026-01-04T09:42:52.780Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767519786458.474,
+      "scan_id": 1767519734423,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\setup.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T09:43:06.458Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767519800277.7786,
+      "scan_id": 1767519734423,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\upgloader.dll",
+      "threat_name": "Heuristic Detection",
+      "threat_type": "suspicious",
+      "severity": "low",
+      "detection_method": "heuristic",
+      "detected_at": "2026-01-04T09:43:20.277Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767519804421.5798,
+      "scan_id": 1767519734423,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\smiengine.dll",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T09:43:24.421Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767519808810.4602,
+      "scan_id": 1767519734423,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\setupplatform.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T09:43:28.810Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767519810084.5913,
+      "scan_id": 1767519734423,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\setuphost.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T09:43:30.084Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767519811075.5383,
+      "scan_id": 1767519734423,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\setup.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T09:43:31.075Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767519812162.5137,
+      "scan_id": 1767519734423,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\rollback.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T09:43:32.162Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767519818364.8887,
+      "scan_id": 1767519734423,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\mighost.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T09:43:38.364Z",
+      "action_taken": null
+    },
+    {
+      "id": 1767519827714.1604,
+      "scan_id": 1767519734423,
+      "file_path": "C:\\Users\\saada\\Desktop\\Win11_25H2_English_x64\\sources\\dism.exe",
+      "threat_name": "PowerShell.Downloader",
+      "threat_type": "trojan",
+      "severity": "high",
+      "detection_method": "signature-pattern",
+      "detected_at": "2026-01-04T09:43:47.714Z",
+      "action_taken": null
+    }
+  ]
+}

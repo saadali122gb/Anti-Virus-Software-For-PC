@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+*.exe
+
+# Quarantine and sensitive data
+quarantine/
+*.quarantine
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Database files
+*.db-journal
+*.db-wal
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+
+# Test files
+tests/temp/
+tests/output/

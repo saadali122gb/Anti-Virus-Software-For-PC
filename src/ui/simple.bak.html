@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Antivirus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #141b3a 100%);
+            color: #f1f5f9;
+            padding: 40px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4f46e5, #6366f1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            font-size: 16px;
+        }
+
+        .card {
+            background: rgba(26, 33, 64, 0.8);
+            border: 1px solid #2d3b5e;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        }
+
+        .status-card {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .status-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #10b981, #059669);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .status-info h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .status-info p {
+            color: #94a3b8;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .btn {
+            padding: 20px 32px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4f46e5, #6366f1);
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(45, 59, 94, 0.8);
+            color: #f1f5f9;
+            border: 1px solid #2d3b5e;
+        }
+
+        .btn-secondary:hover:not(:disabled) {
+            background: rgba(30, 39, 73, 0.8);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .info-item {
+            background: rgba(30, 39, 73, 0.5);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .info-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #4f46e5;
+            margin-bottom: 8px;
+        }
+
+        .info-label {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        #progress-section {
+            display: none;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: rgba(30, 39, 73, 0.8);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4f46e5, #6366f1);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .scan-info {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .threat-list {
+            margin-top: 16px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .threat-item {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid #ef4444;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 8px;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-10px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .threat-name {
+            font-weight: 600;
+            color: #ef4444;
+            margin-bottom: 4px;
+        }
+
+        .threat-path {
+            font-size: 12px;
+            color: #94a3b8;
+            word-break: break-all;
+        }
+
+        .close-btn {
+            float: right;
+            cursor: pointer;
+            color: #94a3b8;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🛡️</div>
+            <h1>Enterprise Antivirus</h1>
+            <p class="subtitle">Professional Security Solution for Your Software House</p>
+        </div>
+
+        <div class="card status-card">
+            <div class="status-icon">✓</div>
+            <div class="status-info">
+                <h2>System Protected</h2>
+                <p>Real-time protection is active and monitoring your system</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Quick Actions</h2>
+            <div class="button-grid">
+                <button class="btn btn-primary" id="btn-quick" onclick="startQuickScan()">
+                    🔍 Quick Scan
+                </button>
+                <button class="btn btn-primary" id="btn-full" onclick="startFullScan()">
+                    🔎 Full Scan
+                </button>
+                <button class="btn btn-secondary" onclick="viewQuarantine()">
+                    🔒 View Quarantine
+                </button>
+                <button class="btn btn-secondary" onclick="viewHistory()">
+                    📜 Scan History
+                </button>
+            </div>
+        </div>
+
+        <div id="progress-section" class="card">
+            <span class="close-btn" onclick="closeProgress()">&times;</span>
+            <h2 id="scan-title">Scanning...</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="scan-info">
+                <span id="progress-text">0% - Initializing...</span>
+                <span id="threats-count">0 threats found</span>
+            </div>
+            <div id="threat-list" class="threat-list"></div>
+        </div>
+
+        <div class="card">
+            <h2>System Statistics</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-value" id="total-scans">0</div>
+                    <div class="info-label">Total Scans</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value" id="threats-found">0</div>
+                    <div class="info-label">Threats Detected</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value" id="files-scanned">0</div>
+                    <div class="info-label">Files Scanned</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const { ipcRenderer } = require('electron');
+
+        // Initial load
+        loadStatistics();
+
+        async function loadStatistics() {
+            try {
+                const stats = await ipcRenderer.invoke('get-statistics');
+                document.getElementById('total-scans').textContent = stats.totalScans || 0;
+                document.getElementById('threats-found').textContent = stats.totalThreats || 0;
+                document.getElementById('files-scanned').textContent = stats.totalFilesScanned || 0;
+            } catch (error) {
+                console.error('Failed to load statistics:', error);
+            }
+        }
+
+        function closeProgress() {
+            document.getElementById('progress-section').style.display = 'none';
+        }
+
+        function startQuickScan() { startScan('quick'); }
+        function startFullScan() { startScan('full'); }
+
+        async function startScan(type) {
+            const progressSection = document.getElementById('progress-section');
+            const progressFill = document.getElementById('progress-fill');
+            const progressText = document.getElementById('progress-text');
+            const threatsCount = document.getElementById('threats-count');
+            const threatList = document.getElementById('threat-list');
+            const scanTitle = document.getElementById('scan-title');
+
+            const btnQuick = document.getElementById('btn-quick');
+            const btnFull = document.getElementById('btn-full');
+
+            // Reset UI
+            progressSection.style.display = 'block';
+            progressFill.style.width = '0%';
+            progressText.textContent = '0% - Initializing...';
+            threatsCount.textContent = '0 threats found';
+            threatList.innerHTML = '';
+            scanTitle.textContent = type === 'quick' ? 'Quick Scan in Progress...' : 'Full System Scan in Progress...';
+
+            btnQuick.disabled = true;
+            btnFull.disabled = true;
+
+            let currentThreats = 0;
+
+            // Handle scan-progress
+            const progressHandler = (event, data) => {
+                progressFill.style.width = data.percentage + '%';
+                progressText.textContent = `${data.percentage}% - ${data.filesScanned} files scanned`;
+            };
+
+            // Handle threat-detected
+            const threatHandler = (event, threat) => {
+                currentThreats++;
+                threatsCount.textContent = `${currentThreats} threats found`;
+
+                const threatItem = document.createElement('div');
+                threatItem.className = 'threat-item';
+                threatItem.innerHTML = `
+                    <div class="threat-name">⚠️ ${threat.name}</div>
+                    <div class="threat-path">${threat.path}</div>
+                `;
+                threatList.insertBefore(threatItem, threatList.firstChild);
+            };
+
+            ipcRenderer.on('scan-progress', progressHandler);
+            ipcRenderer.on('threat-detected', threatHandler);
+
+            try {
+                const results = await ipcRenderer.invoke('start-scan', { type });
+
+                scanTitle.textContent = 'Scan Complete';
+                progressText.textContent = `${results.filesScanned} files scanned in ${Math.round(results.duration / 1000)}s`;
+
+                if (results.threatsFound === 0) {
+                    threatList.innerHTML = '<div style="color: #10b981; text-align: center; padding: 20px;">✅ No threats detected. Your system is clean.</div>';
+                } else {
+                    alert(`Scan finished. ${results.threatsFound} threats were detected!`);
+                }
+
+                loadStatistics();
+            } catch (error) {
+                alert('Scan failed: ' + error.message);
+                scanTitle.textContent = 'Scan Failed';
+            } finally {
+                ipcRenderer.removeListener('scan-progress', progressHandler);
+                ipcRenderer.removeListener('threat-detected', threatHandler);
+                btnQuick.disabled = false;
+                btnFull.disabled = false;
+            }
+        }
+
+        async function viewQuarantine() {
+            try {
+                const list = await ipcRenderer.invoke('get-quarantine-list');
+                if (list.length === 0) {
+                    alert('Quarantine is empty. No threats are isolated.');
+                } else {
+                    alert(`Quarantine contains ${list.length} file(s). You can manage them in the full UI.`);
+                }
+            } catch (error) {
+                alert('Failed to load quarantine: ' + error.message);
+            }
+        }
+
+        async function viewHistory() {
+            try {
+                const history = await ipcRenderer.invoke('get-scan-history');
+                if (history.length === 0) {
+                    alert('No scan history available. Try running a scan first.');
+                } else {
+                    const lastScan = history[0];
+                    alert(`Last scan was ${lastScan.scan_type} on ${new Date(lastScan.start_time).toLocaleString()}.\nFiles scanned: ${lastScan.files_scanned}\nThreats found: ${lastScan.threats_found}`);
+                }
+            } catch (error) {
+                alert('Failed to load history: ' + error.message);
+            }
+        }
+    </script>
+</body>
+
+</html>
